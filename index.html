@@ -197,7 +197,7 @@
 
 <header>
   <h1>🛡️ Politique de Confidentialité</h1>
-  <p><strong>Dépensoo</strong> — Application de gestion budgétaire personnelle · Version 1.2</p>
+  <p><strong>Dépensoo</strong> — Application de gestion budgétaire personnelle · Version 1.4</p>
   <div class="badge-row">
     <span class="badge">✓ Aucune collecte</span>
     <span class="badge">✓ Zéro serveur</span>
@@ -223,7 +223,7 @@
     <ol>
       <li>
         <strong>Via l'application (méthode recommandée) :</strong><br>
-        Rendez-vous dans l'onglet <em>« Réglages »</em> &rsaquo; section <em>« Conformité »</em> &rsaquo; bouton
+        Ouvrez l'application, accédez à l'onglet <em>« Confidentialité &amp; RGPD »</em>, puis appuyez sur le bouton
         <em>« Tout supprimer »</em>. L'effet est <strong>instantané et irréversible</strong> : l'intégralité
         du stockage local (budgets, dépenses, paramètres, clé de chiffrement) est effacée.
       </li>
@@ -302,6 +302,8 @@
       <li><strong>Mot de passe :</strong> Jamais stocké en clair — haché via PBKDF2-SHA256 (310 000 itérations, sel aléatoire 128 bits), jamais transmis</li>
       <li><strong>Stockage :</strong> localStorage chiffré — les données sont illisibles sans la clé dérivée du mot de passe</li>
       <li><strong>Réseau :</strong> Aucune requête réseau émise — l'application fonctionne hors ligne</li>
+      <li><strong>Protection brute-force :</strong> après <strong>5 saisies consécutives de mot de passe incorrect</strong>, toutes les données sont <strong>automatiquement et définitivement supprimées</strong> de l'appareil sans possibilité de récupération</li>
+      <li><strong>Verrouillage automatique :</strong> l'Application se verrouille après <strong>15 minutes d'inactivité</strong> et redemande le mot de passe</li>
     </ul>
   </div>
 
@@ -489,7 +491,16 @@
     <p>
       La présente politique est régie par le <strong>droit français</strong> et le
       <strong>Règlement général sur la protection des données (RGPD — UE 2016/679)</strong>.
-      Tout litige relatif à son interprétation relève de la compétence des juridictions françaises compétentes.
+      Tout litige relève en principe de la compétence des tribunaux français compétents, sans préjudice du droit
+      d'un consommateur de l'Union européenne d'agir devant les juridictions de son lieu de résidence habituelle
+      (Règlement UE n° 1215/2012 — Bruxelles I bis, art. 17-19).
+    </p>
+    <p>
+      En cas de litige non résolu amiablement dans un délai de deux (2) mois, l'utilisateur peut saisir la
+      <strong>plateforme européenne de règlement en ligne des litiges (ODR)</strong> :
+      <a href="https://ec.europa.eu/consumers/odr" style="color:var(--sage)">ec.europa.eu/consumers/odr ↗</a>.
+      Cette mention est fournie à titre informatif ; en tant que particulier non professionnel, l'éditeur n'est
+      pas légalement tenu de désigner un médiateur (art. L.616-1 Code conso — s'applique aux professionnels).
     </p>
     <p>
       <strong>Mise à jour :</strong> Cette politique peut être modifiée. La version en vigueur est toujours
@@ -501,7 +512,7 @@
     <div style="border:1px solid var(--border);border-radius:8px;padding:20px 24px;background:#fafafa">
       <h2 style="font-size:15px;color:var(--ink);margin-bottom:12px">📦 Composants open-source intégrés</h2>
       <p style="font-size:13px;color:var(--ink2);margin-bottom:12px">
-        Dépensoo intègre la bibliothèque open-source suivante, distribuée localement dans l'application (aucun appel réseau vers des serveurs tiers) :
+        Dépensoo intègre les composants open-source suivants, distribués localement dans l'application (aucun appel réseau vers des serveurs tiers) :
       </p>
       <div style="background:#fff;border:1px solid var(--border);border-radius:6px;padding:14px 16px;font-family:monospace;font-size:12px;color:var(--ink2);line-height:1.8">
         SheetJS Community Edition — https://sheetjs.com/<br>
@@ -513,6 +524,10 @@
         SheetJS est utilisé pour l'import de fichiers Excel (.xlsx/.xls) et OpenDocument (.ods).
         La licence Apache 2.0 autorise l'usage commercial avec attribution.
         <a href="https://docs.sheetjs.com/docs/miscellany/license" style="color:var(--sage)">Voir la licence complète ↗</a>
+      </p>
+      <p style="font-size:12px;color:var(--ink3);margin-top:12px;line-height:1.7">
+        L'application est développée avec <strong>Expo</strong>, <strong>React Native</strong> et <strong>react-native-webview</strong>,
+        distribués sous <strong>licence MIT</strong> (open source, aucune restriction d'usage commercial, attribution non obligatoire).
       </p>
     </div>
   </div>
