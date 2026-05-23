@@ -213,10 +213,13 @@
        Obligatoire Google Play — mise en avant selon cahier des charges
   ════════════════════════════════════════════════════════ -->
   <div class="deletion-card">
-    <h2>🗑️ Demande de suppression des données (Conformité Google Play)</h2>
+    <h2>🗑️ Demande de suppression des données</h2>
     <p>
-      L'application <strong>Dépensoo</strong> est conçue selon une architecture <strong>« Zero-Server »</strong>.
-      Aucune donnée financière, personnelle ou d'identification n'est transmise, centralisée ou stockée sur un serveur externe.
+      <strong>Dépensoo</strong> est disponible sous deux formes : application Android via le <strong>Google Play Store</strong>
+      et <strong>Progressive Web App (PWA)</strong> accessible sur iPhone/iPad via Safari à l'adresse
+      <a href="https://kerlumys.github.io/depensoo/" style="color:var(--sage)">kerlumys.github.io/depensoo/</a>.
+      Dans les deux cas, l'architecture est identique : <strong>« Zero-Server »</strong> —
+      aucune donnée financière, personnelle ou d'identification n'est transmise, centralisée ou stockée sur un serveur externe.
       L'éditeur n'a <strong>aucun accès</strong> à vos données et n'en détient <strong>aucune copie</strong>.
     </p>
     <p><strong>Comment supprimer vos données ?</strong></p>
@@ -228,11 +231,18 @@
         du stockage local (budgets, dépenses, paramètres, clé de chiffrement) est effacée.
       </li>
       <li>
-        <strong>Via votre système Android :</strong><br>
+        <strong>Via votre système Android (version Play Store) :</strong><br>
         Allez dans <em>Paramètres</em> &rsaquo; <em>Applications</em> &rsaquo; <em>Dépensoo</em> &rsaquo;
         <em>Stockage</em> &rsaquo; <strong>« Effacer les données »</strong>, ou désinstallez simplement
         l'application. Cela détruira définitivement la clé de chiffrement locale et l'ensemble
         de vos historiques de dépenses.
+      </li>
+      <li>
+        <strong>Via Safari (version PWA — iPhone/iPad) :</strong><br>
+        Allez dans <em>Réglages</em> &rsaquo; <em>Safari</em> &rsaquo; <em>Avancé</em> &rsaquo;
+        <em>Données des sites web</em> &rsaquo; recherchez <strong>kerlumys.github.io</strong> &rsaquo;
+        <strong>« Supprimer »</strong>. Vous pouvez également retirer l'app de votre écran d'accueil —
+        cela n'efface pas les données, seule la suppression via Safari ou le bouton in-app est définitive.
       </li>
     </ol>
   </div>
@@ -297,7 +307,7 @@
   <div class="block">
     <h2>Sécurité technique</h2>
     <ul>
-      <li><strong>Chiffrement local :</strong> AES-GCM 256 bits via la Web Crypto API (native Android)</li>
+      <li><strong>Chiffrement local :</strong> AES-GCM 256 bits via la Web Crypto API (Android et iOS/Safari)</li>
       <li><strong>Exports JSON :</strong> AES-GCM 256 bits — PBKDF2-SHA256, 310 000 itérations, sel aléatoire 128 bits</li>
       <li><strong>Mot de passe :</strong> Jamais stocké en clair — haché via PBKDF2-SHA256 (310 000 itérations, sel aléatoire 128 bits), jamais transmis</li>
       <li><strong>Stockage :</strong> localStorage chiffré — les données sont illisibles sans la clé dérivée du mot de passe</li>
@@ -494,8 +504,14 @@
         (accès, effacement, export).
       </li>
       <li>
-        <strong>Distribution :</strong> Google Play Store —
+        <strong>Distribution Android :</strong> Google Play Store —
         Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland
+      </li>
+      <li>
+        <strong>Distribution PWA (iPhone/iPad) :</strong> Progressive Web App accessible via Safari à l'adresse
+        <a href="https://kerlumys.github.io/depensoo/" style="color:var(--sage)">kerlumys.github.io/depensoo/</a> —
+        hébergée sur GitHub Pages (GitHub, Inc., filiale de Microsoft Corporation, San Francisco, USA).
+        Aucune donnée personnelle n'est transmise à cet hébergeur.
       </li>
     </ul>
   </div>
